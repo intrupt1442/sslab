@@ -1,0 +1,16 @@
+for shell program: gcc 9a.sh
+                   ./a.out
+for changing mode of file: chmod -r filename
+for c prohram : cc program.c
+                ./a.out
+
+for 12 progra : gcc -fopenmp 12.c
+               ./a.out
+
+for lex program : lex progname.l
+                  cc lex.yy.c
+                  ./a.out
+
+for lex and yacc : lex progname.l
+                   bison -y -d progname.y
+                   gcc lex.yy.c y.tab.c
