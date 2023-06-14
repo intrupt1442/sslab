@@ -1,6 +1,7 @@
-for shell program: gcc 9a.sh
-                   ./a.out
+for shell program: sh 9a.sh a.txt b.txt
+
 for changing mode of file: chmod -r filename
+
 for c prohram : cc program.c
                 ./a.out
 
