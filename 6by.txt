@@ -1,0 +1,25 @@
+%{
+#include<stdio.h>
+#include<stdlib.h>
+%}
+
+%token L D NL
+
+%%
+var:L E NL {printf("valid variable\n"); return 0;}
+   E:E L
+|E D
+|;
+%%
+
+int main(){
+printf("enter the variable\n");
+yyparse();
+return 0;
+}
+
+int yyerror(char *msg){
+printf("invalid variable\n");
+return 0;
+}
+

@@ -1,0 +1,30 @@
+%{ 
+#include<stdio.h>
+#include<stdlib.h>
+%}
+
+%token NUM ID
+%left '+''-'
+%left '*''/'
+
+%%
+expr:e {printf("valid expression\n"); return 0;}
+e:e'+'e
+|e'-'e
+|e'*'e
+|e'/'e
+|'('e')'
+|NUM
+|ID ;
+%%
+
+int main(){
+printf("enter the expression\n");
+yyparse();
+return 0;
+}
+
+int yyerror(char *msg){
+printf("invalid expression\n");
+return 0;
+}
